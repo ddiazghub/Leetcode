@@ -1,0 +1,10 @@
+CompileFlags:
+  Add:
+    - -std=c++17
+    - -Wall
+    - -Wextra
+    - -pedantic
+    - "-IC:\\msys64\\clang64\\include\\c++\\v1"
+    - "-LC:\\msys64\\clang64\\lib"
+    - -ferror-limit=0
+  Compiler: clang++

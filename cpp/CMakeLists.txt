@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(Leetcode)
+add_executable(leetcode test.cpp)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_FLAGS "-Wall -Werror -std=c++23")
