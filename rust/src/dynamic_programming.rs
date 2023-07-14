@@ -3,3 +3,4 @@ pub mod fib;
 pub mod tribonacci;
 pub mod longest_subarray;
 pub mod largest_variance;
+pub mod arithmetic_subsequence;
