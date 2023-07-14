@@ -5,6 +5,7 @@ mod backtracking;
 mod bit_manipulation;
 mod search;
 mod tree;
+mod array;
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
