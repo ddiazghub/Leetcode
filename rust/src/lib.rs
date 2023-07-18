@@ -6,6 +6,7 @@ mod bit_manipulation;
 mod search;
 mod tree;
 mod array;
+mod list;
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
