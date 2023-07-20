@@ -7,6 +7,7 @@ mod search;
 mod tree;
 mod array;
 mod list;
+mod stack;
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
