@@ -8,6 +8,8 @@ mod tree;
 mod array;
 mod list;
 mod stack;
+mod recursion;
+mod binary_search;
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
