@@ -26,7 +26,7 @@ impl Cell {
         next
             .into_iter()
             .filter_map(move |(row, col)| Cell::try_new(row, col, rows, cols))
-            .collect()
+           .collect()
     }
 }
 
