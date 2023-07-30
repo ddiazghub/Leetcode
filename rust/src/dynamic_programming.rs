@@ -7,3 +7,4 @@ pub mod arithmetic_subsequence;
 pub mod number_of_longest_increasing_subsequences;
 pub mod max_events;
 pub mod soup_servings;
+pub mod strange_printer;
