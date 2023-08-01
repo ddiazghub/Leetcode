@@ -1,4 +1,4 @@
-use std::{collections::{HashSet, BinaryHeap, HashMap}, cmp::Ordering, ops::{Add, Index}, fmt::Display};
+use std::{collections::{HashSet, BinaryHeap, HashMap}, cmp::Ordering, ops::{Add, Index}};
 
 /// A Cell in a grid or something
 #[derive(PartialEq, Eq, Debug, Clone, Copy)]
