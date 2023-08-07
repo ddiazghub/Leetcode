@@ -1,0 +1,61 @@
+use std::cmp::Ordering;
+
+#[inline]
+fn time(distance: i32, speed: i32) -> f64 {
+    distance as f64 / speed as f64
+}
+
+fn total_time(distances: &[i32], speed: i32) -> f64 {
+    let total: f64 = distances.into_iter()
+        .take(distances.len() - 1)
+        .copied()
+        .map(|dist| time(dist, speed).ceil())
+        .sum();
+
+    total + time(distances[distances.len() - 1], speed)
+}
+
+pub fn min_speed_on_time(dist: Vec<i32>, hour: f64) -> i32 {
+    let stops = dist.len() as i32 - 1;
+    let total_dist: i32 = dist.iter().copied().sum();
+    let lower_bound = (total_dist as f64 / hour).ceil() as i32;
+    let higher_bound = lower_bound + stops;
+
+    if hour.trunc() == hour {
+        return lower_bound;
+    }
+
+    let mut start = lower_bound;
+    let mut end = higher_bound + 1;
+
+    while start < end {
+        let mid = start + (end - start) / 2;
+
+        match hour.total_cmp(&total_time(&dist, mid)) {
+            Ordering::Less => end = mid,
+            Ordering::Equal => return mid,
+            Ordering::Greater => start = mid + 1
+        };
+    }
+
+    start
+}
+
+#[cfg(test)]
+mod tests {
+    use super::min_speed_on_time;
+
+    #[test]
+    fn test1() {
+        let dist = vec![1, 3, 2];
+        let result = min_speed_on_time(dist, 6.0);
+        assert_eq!(result, 1);
+    }
+
+    #[test]
+    fn test2() {
+        let dist = vec![1, 3, 2];
+        let result = min_speed_on_time(dist, 2.7);
+        assert_eq!(result, 3);
+    }
+}
