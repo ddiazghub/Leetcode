@@ -9,3 +9,4 @@ pub mod max_events;
 pub mod soup_servings;
 pub mod strange_printer;
 pub mod min_speed;
+pub mod pair_diff;
