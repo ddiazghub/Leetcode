@@ -11,3 +11,4 @@ pub mod strange_printer;
 pub mod min_speed;
 pub mod pair_diff;
 pub mod change;
+pub mod unique_paths;
