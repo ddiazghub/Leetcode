@@ -1,0 +1,24 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "Leetcode problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddiazghub/Leetcode.git"
+  },
+  "author": "ddiazghub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddiazghub/Leetcode/issues"
+  },
+  "homepage": "https://github.com/ddiazghub/Leetcode#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0"
+  }
+}
